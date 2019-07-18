@@ -1,6 +1,13 @@
 {
   "subpages":
   [
+
+    {
+      "name": "Homepage",
+      "desc": "Return to the homepage of this site.",
+      "link": "/",
+      "img": "/images/home.png"
+    },
     {
       "name": "About",
       "desc": "Insight into my personal life beyond a resume.",
@@ -15,7 +22,7 @@
     },
     {
       "name": "Projects",
-      "desc": "From coding to video-making, these are the fruits of my work.",
+      "desc": "These are the fruits of my work.",
       "link": "/projects",
       "img": "/images/code.png"
     },
