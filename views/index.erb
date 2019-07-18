@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/index.css"/>
+  </head>
+  <body>
+    <%
+      n = 0
+      links = []
+      File.open("data/links.txt", "r").each_line do |line|
+        links[n] = line
+        n += 1
+      end
+      puts links
+     %>
+    <div id = "name-background">
+      <div id = "name-box">
+        <h1>Bill Z. Qin</h1>
+        <h2><a href = "https://www.cmu.edu">Carnegie Mellon University</a>'s <a href = "https://www.cs.cmu.edu">SCS</a> '23</h2>
+        <h2><a href = "https://www.andover.edu">Phillips Academy</a> '19</h2>
+        <div id = "link-boxes">
+          <div id = "resume-box" class = "link-box">
+            <h4>View My Resume</h4>
+            <a href = "<%= links[0] %>"><img src = "/images/gdrive.png" class = "img-button"></img></a>
+          </div>
+          <div id = "github-box" class = "link-box">
+            <h4>Fork and Star Me</h4>
+            <a href = "<%= links[1] %>"><img src = "/images/github.png" class = "img-button"></img></a>
+          </div>
+          <div id = "linkedin-box" class = "link-box">
+            <h4>Connect With Me</h4>
+            <a href = "<%= links[2] %>"><img src = "/images/linkedin.png" class = "img-button"></img></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id = "left-toolbar">
+      <% numHeader = (@jsonsubpages["subpages"]).length %>
+      <% @jsonsubpages['subpages'].each do |subpage| %>
+        <div class = "left-toolbar-elem" height = "<%= 100.0/numHeader %>%">
+          <div class = "toolbar-elem-text">
+            <h3><a href = "<%=subpage["link"]%>"><%= subpage["name"]%></a></h3>
+            <p><%= subpage["desc"]%></p>
+          </div>
+          <img src = "<%= subpage["img"]%>" class = "toolbar-elem-img" alt = "<%= subpage["name"]%>"></img>
+        </div>
+      <% end %>
+    </div>
+    <script>
+      $(".left-toolbar-elem").hover(function(event){
+        if($(this).css("--is-open") != "T"){
+          $(this).css("margin-left","40px");
+        }
+      },
+      function(event){
+        if($(this).css("--is-open") != "T"){
+          $(this).css("margin-left","0");
+          $(this).css("--is-open","F");
+        }
+      });
+      $(document).click(function(event){
+        $target = $(event.target);
+        var left_toolbar_elems = $(".left-toolbar-elem");
+        for(var i = 0; i < left_toolbar_elems.length; i++){
+          if($target.closest(left_toolbar_elems[i]).length){
+            $(left_toolbar_elems[i]).css("margin-left","40%");
+            $(left_toolbar_elems[i]).css("--is-open","T");
+          }else{
+            $(left_toolbar_elems[i]).css("margin-left","0");
+            $(left_toolbar_elems[i]).css("--is-open","F");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

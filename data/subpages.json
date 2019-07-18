@@ -1,0 +1,35 @@
+{
+  "subpages":
+  [
+    {
+      "name": "About",
+      "desc": "Insight into my personal life beyond a resume.",
+      "link": "/about",
+      "img": "/images/about.png"
+    },
+    {
+      "name": "Experience",
+      "desc": "All the times I've been a member of the workforce.",
+      "link": "/experience",
+      "img": "/images/briefcase.png"
+    },
+    {
+      "name": "Projects",
+      "desc": "From coding to video-making, these are the fruits of my work.",
+      "link": "/projects",
+      "img": "/images/code.png"
+    },
+    {
+      "name": "Skills",
+      "desc": "What I can do and what I'm learning to do.",
+      "link": "/skills",
+      "img": "/images/gears.png"
+    },
+    {
+      "name": "Contact",
+      "desc": "Ways to get in touch with me, both formally and informally.",
+      "link": "/contact",
+      "img": "/images/phone.png"
+    }
+  ]
+}
