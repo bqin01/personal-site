@@ -4,6 +4,12 @@ html{
   background-repeat: round;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   height: 100%;
+  text-shadow: 3px 3px black;
+  color: white;
+}
+body{
+  height: 100%;
+  margin: 0px;
 }
 a{
   color: #DDFFAA;
@@ -80,7 +86,6 @@ h1{
   flex-direction: column;
   justify-content: center;
   color: white;
-  text-shadow: 3px 3px black;
   width: 50%;
   margin-left: 60%;
 }
