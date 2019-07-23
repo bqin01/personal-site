@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/styles/all.css"/>
   </head>
-  <body>
+  <body onresize="backgroundfix();">
     <%= yield %>
     <div id = "left-toolbar">
       <% numHeader = (@jsonsubpages["subpages"]).length %>
@@ -20,7 +20,7 @@
             <h3><a href = "<%=subpage["link"]%>"><%= subpage["name"]%></a></h3>
             <p><%= subpage["desc"]%></p>
           </div>
-          <img src = "<%= subpage["img"]%>" class = "toolbar-elem-img" alt = "<%= subpage["name"]%>"
+          <img src = "<%= subpage["img"]%>" class = "toolbar-elem-img" alt = "<%= subpage["name"]%>" width = "50" height = "50"
             <%=
               (@curpage.to_s==subpage["name"].to_s)?
               "style = 'filter: invert(100%); --is-open:X;'":""
@@ -30,6 +30,11 @@
       <% end %>
     </div>
     <script>
+      function backgroundfix(){
+        console.log("Fixing background...");
+        $("body").css("background-image","none");
+        $("body").css("background-image","linear-gradient(to top right, #5588CC, #8855CC)");
+      }
       $(".left-toolbar-elem").hover(function(event){
         if($(this).css("--is-open") != "T" && $(this).css("--is-open") != "X"){
           $(this).css("margin-left","40px");

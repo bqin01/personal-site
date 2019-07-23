@@ -1,6 +1,4 @@
 html{
-  background-image: linear-gradient(to top right, #5588CC, #8855CC);
-  background-color: #5588CC;
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   height: 100%;
   text-shadow: 3px 3px black;
@@ -15,6 +13,9 @@ button:focus
   outline: none !important;
 }
 body{
+  background-size: cover;
+  background-image: linear-gradient(to top right, #5588CC, #8855CC);
+  background-color: #5588CC;
   height: 100%;
   margin: 0px;
 }
