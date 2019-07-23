@@ -1,0 +1,59 @@
+{
+  "projects":
+  [
+    {
+      "name": "Tree Visualization",
+      "type": "app",
+      "link": "https://github.com/bqin01/tree-visualization",
+      "skills": ["Ruby","Sinatra","PostgreSQL","HTML/CSS/JS"],
+      "image": "/images/tree-vis.png",
+      "description": "App that allows users to create, save, and edit virtual trees that are grown differently based on environmental properties like weather, soil, etc.",
+      "complete": "In Progress"
+    },
+    {
+      "name": "Personal Site",
+      "type": "app",
+      "link": "/",
+      "skills": ["Ruby","Sinatra","HTML/CSS/JS"],
+      "image": "/images/personal-site.png",
+      "description": "A personal site that outlines projects, experiences, and information pertaining to me. Stores info in JSON to easily update the site.",
+      "complete": "In Progress"
+    },
+    {
+      "name": "Rate My Professor Query Engine (on hold)",
+      "type": "app",
+      "link": "https://github.com/bqin01/ratemyprof",
+      "skills": ["NodeJS","HTML/CSS/JS"],
+      "image": "/images/rate-my-profs.png",
+      "description": "Query engine that searches through scraped data from ratemyprofessors.com and provides more informative data regarding each professor.",
+      "complete": "July 2019"
+    },
+    {
+      "name": "Dead Roads (Film)",
+      "type": "film",
+      "link": "https://github.com/bqin01/dead-roads",
+      "skills": ["Adobe Premiere","Adobe Photoshop"],
+      "image": "/images/dead-roads.png",
+      "description": "A short film made for Art 609 at Phillips Academy that follows a boy's path to revenge. Deals with topics such as fatherhood, responsibility, and false justice.",
+      "complete": "May 2019"
+    },
+    {
+      "name": "Binary Tree Simulator",
+      "type": "app",
+      "link": "https://github.com/bqin01/binary-trees",
+      "skills": ["Ruby","Sinatra","PostgreSQL","HTML/CSS/JS"],
+      "image": "/images/bintrees.png",
+      "description": "App that holds a shared binary tree that stores node information (parent, children, content) and presents them to the user in an interactive manner.",
+      "complete": "April 2019"
+    },
+    {
+      "name": "Randomized Algorithms",
+      "type": "paper",
+      "link": "https://github.com/bqin01/randomized-algorithms",
+      "skills": ["C","Java","LaTeX","Python"],
+      "image": "/images/randomized-algorithms.png",
+      "description": "A paper-coding project that focuses on research done on the concept of non-deterministic algorithms and how they compare to their deterministic counterparts.",
+      "complete": "Feburary 2019"
+    }
+  ]
+}
