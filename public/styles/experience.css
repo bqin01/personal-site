@@ -6,7 +6,7 @@ body
 {
   width: 0%;
   display: flex;
-  height: 80%;
+  height: 75%;
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 90px;
