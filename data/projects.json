@@ -54,6 +54,15 @@
       "image": "/images/randomized-algorithms.png",
       "description": "A paper-coding project that focuses on research done on the concept of non-deterministic algorithms and how they compare to their deterministic counterparts.",
       "complete": "Feburary 2019"
+    },
+    {
+      "name": "Polynomials, Roots, and Galois: Introductions",
+      "type": "paper",
+      "link": "https://drive.google.com/file/d/1ty48eY5fZ3fpwY2iu2aDpnYxZFHcN8vr/view?usp=sharing",
+      "skills": ["LaTeX"],
+      "image": "/images/mth630paper.png",
+      "description": "A paper written for Math 630 at Phillips Academy that focuses on history's quest to find roots of polynomials while using Galois Theory and group theory to make more rigorous claims.",
+      "complete": "Feburary 2018"
     }
   ]
 }
