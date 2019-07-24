@@ -67,7 +67,7 @@
           $("#right-arrow").prop('disabled', false);
           cSelect -= 1;
           if(cSelect == 0) $(this).prop('disabled', true);
-          $('#projects-box').css('margin-left', parseInt($('#projects-box').css('margin-left')) + 990);
+          $('#projects-box').css('margin-left', cSelect * -990 + 90);
         }
       });
       $("#right-arrow").click(function(event){
@@ -75,7 +75,7 @@
           $("#left-arrow").prop('disabled', false);
           cSelect += 1;
           if(cSelect == maxboxes) $(this).prop('disabled', true);
-          $('#projects-box').css('margin-left', parseInt($('#projects-box').css('margin-left')) - 990);
+          $('#projects-box').css('margin-left', cSelect * -990 + 90);
         }
       });
     </script>

@@ -32,7 +32,7 @@
           $("#right-arrow").prop('disabled', false);
           cSelect -= 1;
           if(cSelect == 0) $(this).prop('disabled', true);
-          $('#experience-box').css('margin-left', parseInt($('#experience-box').css('margin-left')) + 660);
+          $('#experience-box').css('margin-left', cSelect * -660 + 90);
         }
       });
       $("#right-arrow").click(function(event){
@@ -40,7 +40,7 @@
           $("#left-arrow").prop('disabled', false);
           cSelect += 1;
           if(cSelect == maxboxes) $(this).prop('disabled', true);
-          $('#experience-box').css('margin-left', parseInt($('#experience-box').css('margin-left')) - 660);
+          $('#experience-box').css('margin-left', cSelect * -660 + 90);
         }
       });
     </script>
