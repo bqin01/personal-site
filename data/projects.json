@@ -23,7 +23,7 @@
       "name": "Rate My Professor Query Engine (on hold)",
       "type": "app",
       "link": "https://github.com/bqin01/ratemyprof",
-      "skills": ["NodeJS","HTML/CSS/JS"],
+      "skills": ["NodeJS","MongoDB","HTML/CSS/JS"],
       "image": "/images/rate-my-profs.png",
       "description": "Query engine that searches through scraped data from ratemyprofessors.com and provides more informative data regarding each professor.",
       "complete": "July 2019"
