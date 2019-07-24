@@ -36,13 +36,6 @@ class Appl < Sinatra::Base
     @curpage = "Projects"
     erb :projects
   end
-  get '/skills' do
-    subpages = File.open("data/subpages.json")
-    @jsonsubpages = JSON.load(subpages)
-    subpages.close()
-    @curpage = "Skills"
-    erb :skills
-  end
   get '/contact' do
     subpages = File.open("data/subpages.json")
     @jsonsubpages = JSON.load(subpages)

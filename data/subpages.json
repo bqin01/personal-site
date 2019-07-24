@@ -27,12 +27,6 @@
       "img": "/images/code.png"
     },
     {
-      "name": "Skills",
-      "desc": "What I can do and what I'm learning to do.",
-      "link": "/skills",
-      "img": "/images/gears.png"
-    },
-    {
       "name": "Contact",
       "desc": "Ways to get in touch with me, both formally and informally.",
       "link": "/contact",
