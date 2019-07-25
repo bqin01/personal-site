@@ -1,0 +1,21 @@
+.box h1
+{
+  padding-top: 15px;
+}
+#toolbar-offset-box
+{
+  margin-left: 90px;
+}
+#contact-box
+{
+  margin-top: 30px;
+  background-color: #00000044;
+  padding: 0 25px 25px 25px;
+  border-radius: 15px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+.box{
+  margin: 20px;
+}

@@ -17,7 +17,7 @@
       "skills": ["Ruby","Sinatra","HTML/CSS/JS"],
       "image": "/images/personal-site.png",
       "description": "A personal site that outlines projects, experiences, and information pertaining to me. Stores info in JSON to easily update the site.",
-      "complete": "In Progress"
+      "complete": "July 2019"
     },
     {
       "name": "Rate My Professor Query Engine (on hold)",
