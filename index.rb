@@ -47,7 +47,7 @@ class Appl < Sinatra::Base
     subpages = File.open("data/subpages.json")
     @jsonsubpages = JSON.load(subpages)
     subpages.close()
-    @curpage = "Other"
+    @curpage = "Error 404"
     erb :page404
   end
 end
