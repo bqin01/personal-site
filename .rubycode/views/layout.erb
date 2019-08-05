@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/all.css"/>
+    <title><%=@curpage=="Homepage"?"Bill Z. Qin":@curpage%></title>
+  </head>
+  <body onresize="backgroundfix();">
+    <%= yield %>
+    <div id = "left-toolbar">
+      <% numHeader = (@jsonsubpages["subpages"]).length %>
+      <% @jsonsubpages['subpages'].each do |subpage| %>
+        <div class = "left-toolbar-elem" height = "<%= 100.0/numHeader %>%"
+          <%=
+            (@curpage.to_s==subpage["name"].to_s)?
+            "style = 'background-color: #FFFFFF88; --is-open:X;'":""
+          %>
+        >
+          <div class = "toolbar-elem-text">
+            <h3><a href = "<%=subpage["link"]%>"><%= subpage["name"]%></a></h3>
+            <p><%= subpage["desc"]%></p>
+          </div>
+          <img src = "<%= subpage["img"]%>" class = "toolbar-elem-img" alt = "<%= subpage["name"]%>" width = "50" height = "50"
+            <%=
+              (@curpage.to_s==subpage["name"].to_s)?
+              "style = 'filter: invert(100%); --is-open:X;'":""
+            %>
+          ></img>
+        </div>
+      <% end %>
+    </div>
+    <script>
+      function backgroundfix(){
+        $("body").css("background-image","none");
+        $("body").css("background-image","linear-gradient(to top right, #5588CC, #8855CC)");
+      }
+      $(".left-toolbar-elem").hover(function(event){
+        if($(this).css("--is-open") != "T" && $(this).css("--is-open") != "X"){
+          $(this).css("margin-left","40px");
+        }
+      },
+      function(event){
+        if($(this).css("--is-open") != "T" && $(this).css("--is-open") != "X"){
+          $(this).css("margin-left","0");
+          $(this).css("--is-open","F");
+        }
+      });
+      $(document).click(function(event){
+        $target = $(event.target);
+        var left_toolbar_elems = $(".left-toolbar-elem");
+        for(var i = 0; i < left_toolbar_elems.length; i++){
+          if($target.closest(left_toolbar_elems[i]).length && $(left_toolbar_elems[i]).css("--is-open") != "X"){
+            $(left_toolbar_elems[i]).css("margin-left","40%");
+            $(left_toolbar_elems[i]).css("--is-open","T");
+          }else if($(left_toolbar_elems[i]).css("--is-open") != "X"){
+            $(left_toolbar_elems[i]).css("margin-left","0");
+            $(left_toolbar_elems[i]).css("--is-open","F");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
