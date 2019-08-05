@@ -1,0 +1,33 @@
+.box h1
+{
+  padding-top: 15px;
+}
+#centered-box
+{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+}
+#contact-box
+{
+  margin-top: 20px;
+  background-color: #00000044;
+  border-radius: 15px;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.box{
+
+  margin: 20px;
+  width: 45%;
+}
