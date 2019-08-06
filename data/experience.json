@@ -1,0 +1,17 @@
+{
+  "experience":
+  [
+    {
+      "name": "Math Teacher @ Olympiads Math School",
+      "link": "https://olympiads.ca/",
+      "description": "Privately tutored students AMC 10/AMC 12/AIME topics, created curriculum for bigger classes, and graded homework.",
+      "timeframe": "July 2016 - Present"
+    },
+    {
+      "name": "Math Teacher @ TT Math School",
+      "link": "http://www.ttmath.ca/en/",
+      "description": "Taught advanced topics in all subjects found in math contests such as AMC 10 and AIME and helped develop a conducive workspace for learning.",
+      "timeframe": "July 2019"
+    }
+  ]
+}
