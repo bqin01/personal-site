@@ -26,14 +26,14 @@ Route::get('/experience', function () {
     $subpages = json_decode($jsonsubpages,true);
     $jsonexperiences = file_get_contents('../data/experience.json');
     $experiences = json_decode($jsonexperiences,true);
-    return view('experience', ['curpage' => 'Experience', 'subpages' => $subpages]);
+    return view('experience', ['curpage' => 'Experience', 'subpages' => $subpages, 'experiences' => $experiences]);
 });
 Route::get('/projects', function () {
     $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
     $jsonprojects = file_get_contents('../data/projects.json');
     $projects = json_decode($jsonprojects,true);
-    return view('projects', ['curpage' => 'Projects', 'subpages' => $subpages]);
+    return view('projects', ['curpage' => 'Projects', 'subpages' => $subpages, 'projects' => $projects]);
 });
 Route::get('/contact', function () {
     $jsonsubpages = file_get_contents('../data/subpages.json');
