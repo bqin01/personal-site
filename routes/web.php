@@ -12,36 +12,36 @@
 */
 
 Route::get('/', function () {
-    $jsonsubpages = file_get_contents('data/subpages.json');
+    $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
-    return view('index', ['curpage' => 'Homepage']);
+    return view('index', ['curpage' => 'Homepage', 'subpages' => $subpages]);
 });
 Route::get('/about', function () {
-    $jsonsubpages = file_get_contents('data/subpages.json');
+    $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
-    return view('about', ['curpage' => 'About']);
+    return view('about', ['curpage' => 'About', 'subpages' => $subpages]);
 });
 Route::get('/experience', function () {
-    $jsonsubpages = file_get_contents('data/subpages.json');
+    $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
-    $jsonexperiences = file_get_contents('data/experience.json');
+    $jsonexperiences = file_get_contents('../data/experience.json');
     $experiences = json_decode($jsonexperiences,true);
-    return view('experience', ['curpage' => 'Experience']);
+    return view('experience', ['curpage' => 'Experience', 'subpages' => $subpages]);
 });
 Route::get('/projects', function () {
-    $jsonsubpages = file_get_contents('data/subpages.json');
+    $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
-    $jsonprojects = file_get_contents('data/projects.json');
+    $jsonprojects = file_get_contents('../data/projects.json');
     $projects = json_decode($jsonprojects,true);
-    return view('projects', ['curpage' => 'Projects']);
+    return view('projects', ['curpage' => 'Projects', 'subpages' => $subpages]);
 });
 Route::get('/contact', function () {
-    $jsonsubpages = file_get_contents('data/subpages.json');
+    $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
-    return view('contact', ['curpage' => 'Contact']);
+    return view('contact', ['curpage' => 'Contact', 'subpages' => $subpages]);
 });
 Route::get('/{other}', function () {
-    $jsonsubpages = file_get_contents('data/subpages.json');
+    $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
-    return view('page404', ['curpage' => '404']);
+    return view('page404', ['curpage' => '404', 'subpages' => $subpages]);
 });
