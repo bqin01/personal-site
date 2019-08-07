@@ -41,6 +41,7 @@ h1{
 }
 #left-toolbar
 {
+  z-index: 1;
   margin-left: 50px;
   position: fixed;
   left: -100%;
