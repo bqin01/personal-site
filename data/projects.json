@@ -14,7 +14,7 @@
       "name": "Personal Site",
       "type": "app",
       "link": "/",
-      "skills": ["Ruby","Sinatra","HTML/CSS/JS"],
+      "skills": ["PHP","Laravel","HTML/CSS/JS"],
       "image": "/images/personal-site.png",
       "description": "A personal site that outlines projects, experiences, and information pertaining to me. Stores info in JSON to easily update the site.",
       "complete": "July 2019"

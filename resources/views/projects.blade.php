@@ -25,7 +25,9 @@
       "NodeJS" => "/images/node.png",
       "HTML/CSS/JS" => "/images/code.png",
       "Adobe Premiere" => "/images/premiere.png",
-      "Adobe Photoshop" => "/images/photoshop.png"
+      "Adobe Photoshop" => "/images/photoshop.png",
+      "PHP" => "/images/php.png",
+      "Laravel" => "/images/laravel.png"
     );
   @endphp
   <div id = "background">
