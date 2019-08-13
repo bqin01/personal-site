@@ -9,7 +9,7 @@
       <h1>Bill Z. Qin</h1>
       <h2>
         I am a student born on April 9, 2001 in Toronto, ON, Canada interested in algorithm design, full stack app development, mathematics,
-        video directing/editing, game design, game theory, the sciences of creativity, and the importance of Internet meme culture.
+        video directing/editing, game design, game theory, and the logistics of creativity.
       </h2>
       <h2>
         After attending both grade school and middle school in Toronto, I was accepted to attend Phillips Academy in Andover, MA and matriculated

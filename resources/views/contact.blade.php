@@ -7,7 +7,7 @@
   <div id = "background">
     <div id = "centered-box">
       <h1>Contact me!</h1>
-      <h2>There are plenty of ways to contact me for a variety of reasons. Here are the best ways to do so!</h2>
+      <h2>There are plenty of ways to contact me. Here are the best ways to do so!</h2>
       <div id = "contact-box">
         <div class = "box" id = "email-box">
           <h1>Email</h1>
