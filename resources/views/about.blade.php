@@ -17,7 +17,7 @@
         mathematics and computer science.
       </h2>
       <h2>
-        Other interests I have include badminton, table tennis, playing the piano, the clarinet, and handbells, and robotics (VEX).
+        Other interests I have include badminton, table tennis, playing the piano, the clarinet, the handbells, and robotics (VEX).
       </h2>
     </div>
   </div>
