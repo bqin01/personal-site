@@ -11,6 +11,15 @@
       "complete": "In Progress"
     },
     {
+      "name": "Impressionator",
+      "type": "app",
+      "link": "https://github.com/Harvard-Jahseh/Impressionator",
+      "skills": ["NodeJS","Python","HTML/CSS/JS"],
+      "image": "/images/impressionator.png",
+      "description": "App created for HackCMU 2019 that allows you to create impressions of famous people/texts using Markov chains.",
+      "complete": "September 2019"
+    },
+    {
       "name": "Personal Site",
       "type": "app",
       "link": "/",

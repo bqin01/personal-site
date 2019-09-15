@@ -16,12 +16,24 @@ body
 }
 .experience
 {
+  overflow-y: auto;
   border-radius: 15px;
   background-color: #00000044;
   width: 600px;
   height: 23%;
   padding: 15px 30px;
   margin: 15px;
+}
+.experience::-webkit-scrollbar-thumb {
+  background-color: #00000066;
+  border-radius: 5px;
+}
+.experience::-webkit-scrollbar-track {
+  background-color: #00000000;
+  border-radius: 5px;
+}
+.experience::-webkit-scrollbar {
+  background-color: #00000000;
 }
 .experience h2
 {

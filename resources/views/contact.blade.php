@@ -20,11 +20,10 @@
             <a href="mailto:bzq@andrew.cmu.edu">bzq@andrew.cmu.edu</a>
           </h2>
         </div>
-        <div class = "box" id = "phone-box">
-          <h1>Phone</h1>
+        <div class = "box" id = "linkedin-box">
+          <h1>LinkedIn</h1>
           <h2>
-            Cell (US Based):<br>
-            +1(978)886-8024
+            <a href="https://www.linkedin.com/in/billqin01/">Connect and message!</a>
           </h2>
         </div>
       </div>

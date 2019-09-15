@@ -8,7 +8,7 @@
     <div id = "about-box">
       <h1>Bill Z. Qin</h1>
       <h2>
-        I am a student born on April 9, 2001 in Toronto, ON, Canada interested in algorithm design, full stack app development, mathematics,
+        I am a student born in Toronto, ON, Canada interested in algorithm design, full stack app development, mathematics,
         video directing/editing, game design, game theory, and the logistics of creativity.
       </h2>
       <h2>
