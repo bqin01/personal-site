@@ -55,7 +55,7 @@ body
   background-color: #000000CC;
   position: absolute;
   z-index: 1;
-  top: 40px;
+  top: -20px;
 }
 .skill-img:hover
 {
