@@ -23,7 +23,7 @@
       "PostgreSQL" => "/images/postgresql.png",
       "MongoDB" => "/images/mongodb.png",
       "NodeJS" => "/images/node.png",
-      "HTML/CSS/JS" => "/images/code.png",
+      "HTML/CSS/JS" => "/images/html.png",
       "Adobe Premiere" => "/images/premiere.png",
       "Adobe Photoshop" => "/images/photoshop.png",
       "PHP" => "/images/php.png",
@@ -40,7 +40,7 @@
     <h1 style="margin-left: 90px;">Projects</h1>
     <div class = "scrollable-box" id = "projects-box">
       @foreach($projects["projects"] as $proj)
-        <div class = "project" style = "background-color: @php echo($colorcode[$proj["type"]]); @endphp">
+        <div class = "project" style = "border-color: @php echo($colorcode[$proj["type"]]); @endphp">
           <div class = "project-text">
             <div class = "title-time">
               <h2><a href="@php echo($proj["link"]) @endphp">@php echo($proj["name"]); @endphp</a></h2>
@@ -63,7 +63,7 @@
     </div>
   </div>
   <script>
-    var maxboxes = @php echo((count($projects["projects"]) - 1) / 2); @endphp;
+    var maxboxes = @php echo((count($projects["projects"]) - 2) / 2); @endphp;
     var cSelect = 0;
     $("#left-arrow").click(function(event){
       if(cSelect != 0){
@@ -72,14 +72,16 @@
         if(cSelect == 0) $(this).prop('disabled', true);
         $('#projects-box').css('margin-left', cSelect * -990 + 90);
       }
+      console.log(cSelect);
     });
     $("#right-arrow").click(function(event){
       if(cSelect != maxboxes){
         $("#left-arrow").prop('disabled', false);
         cSelect += 1;
-        if(cSelect == maxboxes) $(this).prop('disabled', true);
+        if(cSelect >= maxboxes) $(this).prop('disabled', true);
         $('#projects-box').css('margin-left', cSelect * -990 + 90);
       }
+      console.log(cSelect);
     });
   </script>
 @stop

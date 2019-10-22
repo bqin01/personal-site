@@ -17,8 +17,8 @@ body
 .experience
 {
   overflow-y: auto;
-  border-radius: 15px;
-  background-color: #00000044;
+  border: solid black;
+  border-width: 0px 0px 0px 5px;
   width: 600px;
   height: 23%;
   padding: 15px 30px;

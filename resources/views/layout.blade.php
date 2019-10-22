@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='UTF-8'/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/styles/all.css"/>
     <link rel="stylesheet" type = "text/css" href = "@yield('css')"/>
     <title>
@@ -11,7 +12,7 @@
       @endphp
     </title>
   </head>
-  <body>
+  <body onresize = "textresize();">
     @section('navbar')
       <div id = "left-toolbar">
         @php
@@ -38,10 +39,6 @@
     @yield('content')
 
     <script>
-      function backgroundfix(){
-        $("body").css("background-image","none");
-        $("body").css("background-image","linear-gradient(to top right, #5588CC, #8855CC)");
-      }
       $(".left-toolbar-elem").hover(function(event){
         if($(this).css("--is-open") != "T" && $(this).css("--is-open") != "X"){
           $(this).css("margin-left","40px");
@@ -58,7 +55,7 @@
         var left_toolbar_elems = $(".left-toolbar-elem");
         for(var i = 0; i < left_toolbar_elems.length; i++){
           if($target.closest(left_toolbar_elems[i]).length && $(left_toolbar_elems[i]).css("--is-open") != "X"){
-            $(left_toolbar_elems[i]).css("margin-left","40%");
+            $(left_toolbar_elems[i]).css("margin-left","600px");
             $(left_toolbar_elems[i]).css("--is-open","T");
           }else if($(left_toolbar_elems[i]).css("--is-open") != "X"){
             $(left_toolbar_elems[i]).css("margin-left","0");
