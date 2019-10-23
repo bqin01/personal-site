@@ -12,7 +12,7 @@
       @endphp
     </title>
   </head>
-  <body onresize = "textresize();">
+  <body onload="projectsalign();" onresize = "projectsalign();">
     @section('navbar')
       <div id = "left-toolbar">
         @php
@@ -21,10 +21,10 @@
         @foreach($subpages['subpages'] as $subpage)
           <div class = "left-toolbar-elem" height = "<?php echo(100.0/$numHeader);?>%"
             <?php
-              echo(($curpage==$subpage["name"])?"style = 'background-color: #FFFFFF88; --is-open:X;'":"style = --is-open:F;");
+              echo(($curpage==$subpage["name"])?"style = 'background-color: #FFFFFF00; --is-open:X;'":"style = --is-open:F;");
             ?>>
             <div class = "toolbar-elem-text">
-              <h3><a href = "<?php echo($subpage["link"])?>"><?php echo($subpage["name"]);?></a></h3>
+              <h3><a class = "toolbar-link" href = "<?php echo($subpage["link"])?>"><?php echo($subpage["name"]);?></a></h3>
               <p><?php echo($subpage["desc"]);?></p>
             </div>
             <img src = "<?php echo($subpage["img"]);?>" class = "toolbar-elem-img" alt = "<?php echo($subpage["name"]);?>" width = "50" height = "50"
@@ -55,8 +55,13 @@
         var left_toolbar_elems = $(".left-toolbar-elem");
         for(var i = 0; i < left_toolbar_elems.length; i++){
           if($target.closest(left_toolbar_elems[i]).length && $(left_toolbar_elems[i]).css("--is-open") != "X"){
-            $(left_toolbar_elems[i]).css("margin-left","600px");
-            $(left_toolbar_elems[i]).css("--is-open","T");
+            if($(left_toolbar_elems[i]).css("--is-open") == "T" && !$target.closest($(".toolbar-link")[i]).length){
+              $(left_toolbar_elems[i]).css("margin-left","0");
+              $(left_toolbar_elems[i]).css("--is-open","F");
+            }else{
+              $(left_toolbar_elems[i]).css("margin-left","600px");
+              $(left_toolbar_elems[i]).css("--is-open","T");
+            }
           }else if($(left_toolbar_elems[i]).css("--is-open") != "X"){
             $(left_toolbar_elems[i]).css("margin-left","0");
             $(left_toolbar_elems[i]).css("--is-open","F");

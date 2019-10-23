@@ -31,13 +31,16 @@
     );
   @endphp
   <div id = "background">
-    <button id = "left-arrow" disabled ><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></button>
-    <button id = "right-arrow"
-    @php
-      echo(count($projects["projects"]) <= 2 ? "disabled" : "");
-    @endphp
-    ><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></button>
-    <h1 style="margin-left: 90px;">Projects</h1>
+    <div id = "top-toolbar">
+      <div class = "arrow-holder"><button id = "left-arrow" disabled ><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z"/></svg></button></div>
+      <div><h1>Projects</h1></div>
+      <div class = "arrow-holder"><button id = "right-arrow"
+      @php
+        echo(count($projects["projects"]) <= 2 ? "disabled" : "");
+      @endphp
+      ><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg></button></div>
+    </div>
+    <div id = "loading-text"><h2>Loading assets...</h2></div>
     <div class = "scrollable-box" id = "projects-box">
       @foreach($projects["projects"] as $proj)
         <div class = "project" style = "border-color: @php echo($colorcode[$proj["type"]]); @endphp">
@@ -65,12 +68,18 @@
   <script>
     var maxboxes = @php echo((count($projects["projects"]) - 2) / 2); @endphp;
     var cSelect = 0;
+    function projectsalign()
+    {
+      $("#loading-text").css("visibility","hidden");
+      $("#projects-box").css("opacity",1);
+      $("#projects-box").css("margin-left", window.outerWidth / 2  - 495 + cSelect * -990);
+    }
     $("#left-arrow").click(function(event){
       if(cSelect != 0){
         $("#right-arrow").prop('disabled', false);
         cSelect -= 1;
         if(cSelect == 0) $(this).prop('disabled', true);
-        $('#projects-box').css('margin-left', cSelect * -990 + 90);
+        $('#projects-box').css('margin-left', window.outerWidth / 2  - 495 + cSelect * -990);
       }
       console.log(cSelect);
     });
@@ -79,9 +88,8 @@
         $("#left-arrow").prop('disabled', false);
         cSelect += 1;
         if(cSelect >= maxboxes) $(this).prop('disabled', true);
-        $('#projects-box').css('margin-left', cSelect * -990 + 90);
+        $('#projects-box').css('margin-left', window.outerWidth / 2  - 495 + cSelect * -990);
       }
-      console.log(cSelect);
     });
   </script>
 @stop

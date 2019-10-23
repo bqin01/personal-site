@@ -1,18 +1,28 @@
 body
 {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #projects-box
 {
+  opacity: 0;
   width: 0%;
   height: 75%;
+  position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 90px;
   transition-duration: 0.6s;
   -ms-transition-duration: 0.6s;
   -webkit-transition-duration: 0.6s;
+}
+#loading-text
+{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }
 .project-text{
   width: 50%;
