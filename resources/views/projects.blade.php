@@ -55,8 +55,16 @@
             <img class = "project-img" src = "@php echo($proj["image"]) @endphp"></img>
             <div class = "project-skills">
               @foreach($proj["skills"] as $skill)
-                <div class = "skill-img" style = "background-image: url('@php echo($skillpics[$skill]); @endphp');" height = "40" width = "40">
-                  <span class = "skill-hover" style = "left: -@php echo(strlen($skill) * 7) @endphppx">@php echo($skill) @endphp</span>
+                <div class = "skill-img" style = "background-image: url('@php echo($skillpics[$skill]); @endphp');
+                @php
+                  if($skill == 'HTML/CSS/JS' || $skill == 'PHP' || $skill == 'LaTeX') echo('--uninvert:T;');
+                @endphp
+                " height = "40" width = "40">
+                  <span class = "skill-hover" style = "left: -@php echo(strlen($skill) * 7) @endphppx;
+                  @php
+                    if($skill == 'HTML/CSS/JS') echo('filter: invert(0);');
+                  @endphp
+                  ">@php echo($skill) @endphp</span>
                 </div>
               @endforeach
             </div>

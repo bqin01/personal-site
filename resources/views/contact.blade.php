@@ -5,6 +5,10 @@
 @endsection
 @section('content')
   <div id = "background">
+    <div id = "invert-button">
+      <img id = "invert-img" src = "/images/sun.svg" width = "64" height = "64" onclick = "darkmode();"></img>
+      <div id = "invert-vline"></div>
+    </div>
     <div id = "centered-box">
       <h1>Contact me!</h1>
       <h2>There are plenty of ways to contact me. Here are the best ways to do so!</h2>

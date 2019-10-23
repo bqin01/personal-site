@@ -2,14 +2,36 @@ html{
   filter: invert(0);
   font-family: 'Montserrat', sans-serif;
   height: 100%;
-  color: #112D32;
+  color: #222222;
 }
 .project-img, .skill-img{
   filter: invert(0);
 }
 p
 {
-  color: #112D32;
+  color: #222222;
+}
+#invert-button
+{
+  position: absolute;
+  right: 75px;
+  top: 50px;
+  display: flex;
+  flex-direction: row;
+}
+#invert-vline
+{
+  background-color: black;
+  margin-left: 15px;
+  width: 5px;
+  height: 64px;
+  transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+}
+#invert-button:hover #invert-vline
+{
+  height: 0px;
 }
 #top-toolbar
 {

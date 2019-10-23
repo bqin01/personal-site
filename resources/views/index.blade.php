@@ -18,6 +18,11 @@
     }
   @endphp
   <div id = "background">
+    <div id = "invert-button">
+      <img id = "invert-img" src = "/images/sun.svg" width = "64" height = "64" onclick = "darkmode();"></img>
+      <div id = "invert-vline"></div>
+    </div>
+  </div>
     <div id = "name-box">
       <div id = "intro" onclick = "namechange();">
         <h1 id = "name">Bill Z. Qin</h1>

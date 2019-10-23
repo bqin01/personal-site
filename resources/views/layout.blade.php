@@ -3,6 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="/styles/all.css"/>
     <link rel="stylesheet" type = "text/css" href = "@yield('css')"/>
@@ -12,7 +13,33 @@
       @endphp
     </title>
   </head>
-  <body onload="projectsalign();" onresize = "projectsalign();">
+  <body onload="updatemode(); projectsalign();" onresize = "projectsalign();">
+    <script>
+      var projectimages = $('.project-img');
+      var skillimages = $('.skill-img');
+      if(Cookies.get('mode') == 'dark')
+      {
+        $('#invert-img').attr('src','/images/moon.png');
+        $('html').css('filter','invert(1)');
+        for(var i = 0; i < projectimages.length; i++){
+          $(projectimages[i]).css('filter','invert(1)');
+        }
+        for(var i = 0; i < skillimages.length; i++){
+          if($(skillimages[i]).css('--uninvert') != 'T'){
+            $(skillimages[i]).css('filter','invert(1)');
+          }
+        }
+      }else{
+        ('html').css('filter','invert(0)');
+        $('#invert-img').attr('src','/images/sun.svg');
+        for(var i = 0; i < projectimages.length; i++){
+          $(projectimages[i]).css('filter','invert(0)');
+        }
+        for(var i = 0; i < skillimages.length; i++){
+          $(skillimages[i]).css('filter','invert(0)');
+        }
+      }
+    </script>
     @section('navbar')
       <div id = "left-toolbar">
         @php
@@ -39,6 +66,43 @@
     @yield('content')
 
     <script>
+      function updatemode()
+      {
+        var projectimages = $('.project-img');
+        var skillimages = $('.skill-img');
+        if(Cookies.get('mode') == 'dark')
+        {
+          $('html').css('filter','invert(1)');
+          $('#invert-img').attr('src','/images/moon.png');
+          for(var i = 0; i < projectimages.length; i++){
+            $(projectimages[i]).css('filter','invert(1)');
+          }
+          for(var i = 0; i < skillimages.length; i++){
+            if($(skillimages[i]).css('--uninvert') != 'T'){
+              $(skillimages[i]).css('filter','invert(1)');
+            }
+          }
+        }else{
+          $('html').css('filter','invert(0)');
+          $('#invert-img').attr('src','/images/sun.svg');
+          for(var i = 0; i < projectimages.length; i++){
+            $(projectimages[i]).css('filter','invert(0)');
+          }
+          for(var i = 0; i < skillimages.length; i++){
+            $(skillimages[i]).css('filter','invert(0)');
+          }
+        }
+      }
+
+      function darkmode(){
+        if(Cookies.get('mode') == 'dark')
+        {
+          Cookies.set('mode','light');
+        }else{
+          Cookies.set('mode','dark');
+        }
+        updatemode();
+      }
       $(".left-toolbar-elem").hover(function(event){
         if($(this).css("--is-open") != "T" && $(this).css("--is-open") != "X"){
           $(this).css("margin-left","40px");
