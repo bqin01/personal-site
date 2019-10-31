@@ -73,6 +73,7 @@
         if(Cookies.get('mode') == 'dark')
         {
           $('html').css('filter','invert(1)');
+          $('html').css('background-color','#000000');
           $('#invert-img').attr('src','/images/moon.png');
           for(var i = 0; i < projectimages.length; i++){
             $(projectimages[i]).css('filter','invert(1)');
@@ -85,6 +86,7 @@
         }else{
           $('html').css('filter','invert(0)');
           $('#invert-img').attr('src','/images/sun.svg');
+          $('html').css('background-color','#FFFFFF');
           for(var i = 0; i < projectimages.length; i++){
             $(projectimages[i]).css('filter','invert(0)');
           }
