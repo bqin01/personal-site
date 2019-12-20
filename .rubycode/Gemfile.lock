@@ -5,7 +5,7 @@ GEM
     json (2.2.0)
     multi_json (1.13.1)
     mustermann (1.0.3)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-protection (2.0.5)
       rack
     rake (12.3.2)
@@ -24,6 +24,7 @@ GEM
     tilt (2.0.9)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
