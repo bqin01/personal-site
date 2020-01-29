@@ -52,7 +52,8 @@
             <p>@php echo($proj["description"]); @endphp</p>
           </div>
           <div class = "project-imgs">
-            <img class = "project-img" src = "@php echo($proj["image"]) @endphp"></img>
+            <img class = "project-img" id = "@php echo($proj["name"]) @endphp-img"
+            src = "@php echo($proj["image"]) @endphp"></img>
             <div class = "project-skills">
               @foreach($proj["skills"] as $skill)
                 <div class = "skill-img" style = "background-image: url('@php echo($skillpics[$skill]); @endphp');
@@ -81,6 +82,14 @@
       $("#loading-text").css("visibility","hidden");
       $("#projects-box").css("opacity",1);
       $("#projects-box").css("margin-left", window.outerWidth / 2  - 495 + cSelect * -990);
+      if(Cookies.get('mode') == 'dark')
+      {
+        $(".project-img").each(function() {
+          if($(this).attr("src") == "/images/personal-site-dark.png"){
+            $(this).attr("src","/images/personal-site-light.png");
+          }
+        });
+      }
     }
     $("#left-arrow").click(function(event){
       if(cSelect != 0){

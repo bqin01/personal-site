@@ -5,7 +5,7 @@
       "name": "Tree Visualization",
       "type": "app",
       "link": "https://github.com/bqin01/tree-visualization",
-      "skills": ["Ruby","Sinatra","PostgreSQL","HTML/CSS/JS"],
+      "skills": ["Ruby","Sinatra","PostgreSQL","HTML/CSS/JS","LaTeX"],
       "image": "/images/tree-vis.png",
       "description": "App that allows users to create, save, and edit virtual trees that are grown differently based on environmental properties like weather, soil, etc.",
       "complete": "In Progress"
@@ -24,7 +24,7 @@
       "type": "app",
       "link": "/",
       "skills": ["PHP","Laravel","HTML/CSS/JS"],
-      "image": "/images/personal-site.png",
+      "image": "/images/personal-site-dark.png",
       "description": "A personal site that outlines projects, experiences, and information pertaining to me. Stores info in JSON to easily update the site.",
       "complete": "July 2019"
     },
