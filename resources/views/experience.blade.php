@@ -28,14 +28,14 @@
     </div>
   </div>
   <script>
-    var maxboxes = @php echo((count($experiences["experience"]) - 1) / 3); @endphp;
+    var maxboxes = @php echo((count($experiences["experience"]) - 1) / 4); @endphp;
     var cSelect = 0;
     $("#left-arrow").click(function(event){
       if(cSelect != 0){
         $("#right-arrow").prop('disabled', false);
         cSelect -= 1;
         if(cSelect == 0) $(this).prop('disabled', true);
-        $('#experience-box').css('margin-left', cSelect * -660 + 90);
+        $('#experience-box').css('margin-left', cSelect * -1320 + 90);
       }
     });
     $("#right-arrow").click(function(event){
@@ -43,7 +43,7 @@
         $("#left-arrow").prop('disabled', false);
         cSelect += 1;
         if(cSelect == maxboxes) $(this).prop('disabled', true);
-        $('#experience-box').css('margin-left', cSelect * -660 + 90);
+        $('#experience-box').css('margin-left', cSelect * -1320 + 90);
       }
     });
   </script>

@@ -40,6 +40,9 @@ Route::get('/contact', function () {
     $subpages = json_decode($jsonsubpages,true);
     return view('contact', ['curpage' => 'Contact', 'subpages' => $subpages]);
 });
+Route::get('/resume.pdf', function(){
+    return response()->file('./files/resume.pdf'); 
+});
 Route::get('/{other}', function () {
     $jsonsubpages = file_get_contents('../data/subpages.json');
     $subpages = json_decode($jsonsubpages,true);
