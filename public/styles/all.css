@@ -77,7 +77,8 @@ h1{
 }
 #left-toolbar
 {
-  z-index: 1;
+  background-color: white;
+  z-index: 1000;
   margin-left: 50px;
   position: fixed;
   left: -700px;
@@ -194,4 +195,49 @@ h1{
   -webkit-transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+}
+#left-hide
+{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  right: 100%;
+  transform: translate(100%, 0%);
+  -ms-transform: translate(100%, 0%);
+  -webkit-transform: translate(100%, 0%);
+  height: 100%;
+  z-index: 50;
+}
+#left-hide-box
+{
+  background: white;
+  width: 100px;
+}
+#left-grad-box
+{
+  background: linear-gradient(to right,#FFFFFFFF,#FFFFFF00);
+  width: 100px;
+}
+
+#right-hide
+{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 100%;
+  transform: translate(-100%, 0%);
+  -ms-transform: translate(-100%, 0%);
+  -webkit-transform: translate(-100%, 0%);
+  height: 100%;
+  z-index: 50;
+}
+#right-hide-box
+{
+  background: white;
+  width: 100px;
+}
+#right-grad-box
+{
+  background: linear-gradient(to left,#FFFFFFFF,#FFFFFF00);
+  width: 100px;
 }
