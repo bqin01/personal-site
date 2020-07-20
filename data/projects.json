@@ -4,16 +4,16 @@
     {
       "name": "Tree Visualization",
       "type": "app",
-      "link": "https://github.com/bqin01/tree-visualization",
+      "link": "https://treevis.herokuapp.com",
       "skills": ["Ruby","Sinatra","PostgreSQL","HTML/CSS/JS","LaTeX"],
       "image": "/images/tree-vis.png",
-      "description": "App that allows users to create, save, and edit virtual trees that are grown differently based on environmental properties like weather, soil, etc.",
-      "complete": "In Progress"
+      "description": "Full-stack app mimicing the growth of trees in real time, allowing users to create, grow, and save their own trees.",
+      "complete": "July 2020"
     },
     {
       "name": "Impressionator",
       "type": "app",
-      "link": "https://github.com/Harvard-Jahseh/Impressionator",
+      "link": "https://impressionator.herokuapp.com",
       "skills": ["NodeJS","Python","HTML/CSS/JS"],
       "image": "/images/impressionator.png",
       "description": "App created for HackCMU 2019 that allows you to create impressions of famous people/texts using Markov chains.",
@@ -49,10 +49,10 @@
     {
       "name": "Binary Tree Simulator",
       "type": "app",
-      "link": "https://github.com/bqin01/binary-trees",
+      "link": "https://bintree.herokuapp.com/",
       "skills": ["Ruby","Sinatra","PostgreSQL","HTML/CSS/JS"],
       "image": "/images/bintrees.png",
-      "description": "App that holds a shared binary tree that stores node information (parent, children, content) and presents them to the user in an interactive manner.",
+      "description": "App that stores a globally shared binary tree that stores node information (parent, children, content) and presents them to the user in an interactive manner.",
       "complete": "April 2019"
     },
     {
