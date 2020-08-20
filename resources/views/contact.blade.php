@@ -23,7 +23,7 @@
         <div class = "box" id = "linkedin-box">
           <h1>LinkedIn</h1>
           <h2>
-            <a href="https://www.linkedin.com/in/billqin01/">Connect and message!</a>
+            <a href="https://www.linkedin.com/in/bzqin/">Connect and message!</a>
           </h2>
         </div>
       </div>
