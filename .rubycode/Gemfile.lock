@@ -8,7 +8,7 @@ GEM
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
-    rake (12.3.2)
+    rake (12.3.3)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -24,6 +24,7 @@ GEM
     tilt (2.0.9)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
