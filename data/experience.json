@@ -2,10 +2,22 @@
   "experience":
   [
     {
-      "name": "Scala Developer for KeYmaera X @ CMU's Logical Systems Lab",
-      "link": "http://www.ls.cs.cmu.edu/KeYmaeraX/index.html",
-      "description": "Implementing trigonometric and exponentiation functions as well as creating models using these functions in CMU's Axiomatic Hybrid Solver theorem prover, KeYmaera X. Working to support user defined functions into the theorem prover.",
-      "timeframe": "Feburary 2020 - June 2020"
+      "name": "Quantitative Research Intern @ Jane Street",
+      "link": "https://www.janestreet.com/",
+      "description": "Utilized Pandas library to conduct research into various market data to discover trends and develop profitable trading strategies.",
+      "timeframe": "May 2022 - August 2022"
+    },
+    {
+      "name": "DevOps Engineer Intern @ Vecna Robotics",
+      "link": "https://www.vecnarobotics.com/",
+      "description": "Developed microservices, automated CI/CD, and other pipeline changes to improve engineer productivity.",
+      "timeframe": "June 2021 - August 2021"
+    },
+    {
+      "name": "(Head) Teaching Assistant for 15-451: Algorithm Analysis and Design @ Carnegie Mellon",
+      "link": "https://www.cs.cmu.edu/afs/cs/Web/People/15451/index.html",
+      "description": "Led recitations and office hours, developed course content, managed autograde software, and managed various other logistics to help the course run smoothly.",
+      "timeframe": "August 2021 - December 2022"
     },
     {
       "name": "Math Teacher @ Olympiads Math School",
